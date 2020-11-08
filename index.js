@@ -47,7 +47,7 @@ module.exports.Menu = class extends EventEmitter {
     this.userID = userID
     this.ms = ms
 
-    /*const missingPerms = []
+    const missingPerms = []
     // this usually means it's a dm channel that hasn't been created
     if (!this.channel) {
       this.channel.client.users.cache.get(this.userID).createDM(true)
@@ -58,10 +58,10 @@ module.exports.Menu = class extends EventEmitter {
           missingPerms.push(perm)
         }
       })
-      if (missingPerms.length) /*console.log(`\x1B[96m[discord.js-menu]\x1B[0m Looks like you're missing ${missingPerms.join(', ')} in #${this.channel.name} (${this.channel.guild.name}). This perm is needed for basic menu operation. You'll probably experience problems sending menus in this channel.`)*/
+      if (missingPerms.length) console.log(`\x1B[96m[discord.js-menu]\x1B[0m Looks like you're missing ${missingPerms.join(', ')} in #${this.channel.name} (${this.channel.guild.name}). This perm is needed for basic menu operation. You'll probably experience problems sending menus in this channel.`)
     } else {
-      /*console.log(`\x1B[96m[discord.js-menu]\x1B[0m Looks like you're trying to send a menu as a DM (to ${this.channel.recipient.tag}). DMs don't allow removing other people's reactions, making the menu fundamentally broken. The menu will still send, but you have been warned that what you're doing almost certainly won't work, so don't come complaining to me.`)*/
-  }*/
+      console.log(`\x1B[96m[discord.js-menu]\x1B[0m Looks like you're trying to send a menu as a DM (to ${this.channel.recipient.tag}). DMs don't allow removing other people's reactions, making the menu fundamentally broken. The menu will still send, but you have been warned that what you're doing almost certainly won't work, so don't come complaining to me.`)
+}
 
     /**
      * List of pages available to the Menu.
